@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <script>
+        async function shortenURL() {
+            const longUrl = document.getElementById("long_url").value;
+            const response = await fetch("/shorten_url", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ long_url: longUrl })
+            });
+            const result = await response.json();
+            document.getElementById("short_url").innerText = result.short_url || result.error;
+        }
+
+
+    </script>
+</head>
+<body>
+    <h2>URL Shortener</h2>
+    {% csrf_token %}
+    <input type="text" id="long_url" placeholder="Enter long URL">
+    <button onclick="shortenURL()">Shorten</button>
+    <p>Shortened URL: <span id="short_url"></span></p>
+
+</body>
+</html>
