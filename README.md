@@ -33,6 +33,7 @@ This is a simple URL shortener service built using Django. It allows users to su
    
 
 5. *Start the development server:*
+   sh
    python manage.py runserver
    
 
