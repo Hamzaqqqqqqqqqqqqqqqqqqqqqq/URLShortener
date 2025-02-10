@@ -17,7 +17,6 @@ This is a simple URL shortener service built using Django. It allows users to su
 ## Installation & Setup
 1. *Clone the repository:*
    git clone https://github.com/Hamzaqqqqqqqqqqqqqqqqqqqqqq/URLShortener.git
-   cd url-shortener
    
 
 2. *Activate a virtual environment:*
