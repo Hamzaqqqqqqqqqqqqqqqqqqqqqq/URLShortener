@@ -33,7 +33,6 @@ This is a simple URL shortener service built using Django. It allows users to su
    
 
 5. *Start the development server:*
-   sh
    python manage.py runserver
    
 
@@ -42,13 +41,13 @@ This is a simple URL shortener service built using Django. It allows users to su
 ### 1. Shorten a URL
 - *Endpoint:* POST /shorten
 - *Request Body:*
-  json
+  
   {
     "long_url": "https://www.example.com"
   }
   
 - *Response:*
-  json
+  
   {
     "short_url": "http://short.ner/abc123"
   }
